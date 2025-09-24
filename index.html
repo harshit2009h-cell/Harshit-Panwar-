@@ -1,1 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Resume</title>
+  <meta name="description" content="Resume / CV of Your Name" />
+  <style>
+    /* Simple reset */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;line-height:1.4;color:#1f2937;background:#f8fafc;padding:24px}
 
+    /* Layout */
+    .container{max-width:900px;margin:0 auto;background:#fff;border-radius:12px;box-shadow:0 8px 30px rgba(23,23,23,0.08);overflow:hidden}
+    header{display:flex;gap:20px;padding:28px;border-bottom:1px solid #eef2f7;align-items:center}
+    .avatar{width:120px;height:120px;border-radius:14px;flex:0 0 120px;overflow:hidden;background:linear-gradient(135deg,#e6eefb,#fbeee6);display:flex;align-items:center;justify-content:center;font-weight:700;color:#374151}
+    .profile{flex:1}
+    h1{font-size:28px;margin-bottom:6px}
+    .headline{color:#374151;opacity:0.85;margin-bottom:8px}
+    .meta{color:#6b7280;font-size:14px}
+
+    main{display:grid;grid-template-columns:1fr 340px;gap:28px;padding:28px}
+    section{background:transparent}
+    .card{padding:14px;border-radius:10px}
+
+    /* Left column content */
+    .section-title{font-weight:700;margin-bottom:12px;color:#0f172a}
+    .about p{color:#334155}
+    .experience-item{margin-bottom:18px}
+    .exp-role{font-weight:700}
+    .exp-company{color:#475569;font-size:14px}
+    .exp-dates{color:#6b7280;font-size:13px}
+    .bullets{margin-top:8px;padding-left:18px;color:#334155}
+
+    /* Right column */
+    aside{padding:14px}
+    .contact-list div{margin-bottom:10px;color:#334155}
+    .skill{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+    .skillbar{height:8px;background:#e6eefb;border-radius:999px;flex:1;margin-left:10px;overflow:hidden}
+    .skillbar > i{display:block;height:100%;background:linear-gradient(90deg,#06b6d4,#7c3aed);}
+
+    /* Projects */
+    .project{margin-bottom:12px}
+    .project a{color:#0ea5a4;text-decoration:none}
+
+    /* Buttons */
+    .actions{display:flex;gap:8px;margin-left:auto}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:8px;border:1px solid transparent;background:#0ea5a4;color:#fff;font-weight:600;cursor:pointer;text-decoration:none}
+    .btn.ghost{background:transparent;color:#111827;border-color:#e6eefb}
+
+    /* Responsive */
+    @media (max-width:880px){main{grid-template-columns:1fr;}
+      .avatar{width:84px;height:84px}
+      header{flex-direction:row;gap:12px}
+      .actions{margin-top:8px}
+    }
+
+    /* Print */
+    @media print{
+      body{background:#fff;padding:0}
+      .container{box-shadow:none}
+      .actions, .avatar{display:none}
+      main{grid-template-columns:1fr 320px}
+      a::after{content:""}
+    }
+
+    /* small helpers */
+    .muted{color:#64748b}
+    .separator{height:1px;background:#eef2f7;margin:12px 0;border-radius:2px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar" aria-hidden="true">Y<br/>N</div>
+      <div class="profile">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="flex:1">
+            <h1>Your Name</h1>
+            <div class="headline">Graphic Designer • Visual Storyteller • Open to freelance & internships</div>
+            <div class="meta">Location • Email • Phone</div>
+          </div>
+          <div class="actions">
+            <button class="btn" onclick="window.print()">📄 Print / Save PDF</button>
+            <a class="btn ghost" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- LEFT COLUMN -->
+      <div>
+        <section class="card about">
+          <div class="section-title">About</div>
+          <p>I am a creative and detail-oriented graphic designer with experience designing digital and print assets. I love translating ideas into clean visuals and enjoy working on sustainable, socially conscious projects. Replace this paragraph with your own bio — 2–4 lines summarizing who you are, what you do, and what you’re looking for.</p>
+        </section>
+
+        <div style="height:16px"></div>
+
+        <section class="card">
+          <div class="section-title">Experience</div>
+
+          <div class="experience-item">
+            <div class="exp-role">Graphic Design Intern — Phailaav (example)</div>
+            <div class="exp-company">Remote · Internship</div>
+            <div class="exp-dates">Jan 2025 — Present</div>
+            <ul class="bullets">
+              <li>Worked on social media creatives, banners, and brand assets following accessibility and sustainability guidelines.</li>
+              <li>Collaborated with the content team to improve visual storytelling leading to a 20% engagement uplift (replace with your metric).</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="exp-role">Freelance Designer</div>
+            <div class="exp-company">Self-employed</div>
+            <div class="exp-dates">2023 — 2024</div>
+            <ul class="bullets">
+              <li>Designed logos, posters, and merchandise for small businesses and college projects.</li>
+            </ul>
+          </div>
+
+        </section>
+
+        <div style="height:16px"></div>
+
+        <section class="card">
+          <div class="section-title">Projects</div>
+
+          <div class="project">
+            <div style="font-weight:700">Portfolio Website</div>
+            <div class="muted">A one-page portfolio showcasing illustration and branding work. <a href="#" target="_blank">Live →</a></div>
+          </div>
+
+          <div class="project">
+            <div style="font-weight:700">Net-Zero Video Campaign</div>
+            <div class="muted">Worked on motion thumbnails, storyboard and final edits for a sustainability awareness campaign.</div>
+          </div>
+
+        </section>
+
+        <div style="height:16px"></div>
+
+        <section class="card">
+          <div class="section-title">Education</div>
+          <div style="margin-bottom:8px">
+            <div style="font-weight:700">Bachelor of Design (Example)</div>
+            <div class="muted">University Name · 2021 — 2024</div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <aside>
+        <div class="card">
+          <div class="section-title">Contact</div>
+          <div class="contact-list">
+            <div><strong>Email:</strong> your.email@example.com</div>
+            <div><strong>Phone:</strong> +91 98765 43210</div>
+            <div><strong>Location:</strong> City, Country</div>
+            <div><strong>Portfolio:</strong> <a href="#">your-site.example</a></div>
+          </div>
+
+          <div class="separator"></div>
+
+          <div style="margin-top:10px">
+            <div class="section-title">Skills</div>
+            <div class="skill"><span>Adobe Photoshop</span><div class="skillbar" aria-hidden="true"><i style="width:90%"></i></div></div>
+            <div class="skill"><span>Adobe Illustrator</span><div class="skillbar" aria-hidden="true"><i style="width:85%"></i></div></div>
+            <div class="skill"><span>Figma / UI</span><div class="skillbar" aria-hidden="true"><i style="width:78%"></i></div></div>
+            <div class="skill"><span>HTML / CSS</span><div class="skillbar" aria-hidden="true"><i style="width:60%"></i></div></div>
+          </div>
+
+          <div class="separator"></div>
+
+          <div style="margin-top:10px">
+            <div class="section-title">Languages</div>
+            <div class="muted">English (Fluent) · Hindi (Native)</div>
+          </div>
+
+          <div class="separator"></div>
+
+          <div style="margin-top:10px">
+            <div class="section-title">Certificates</div>
+            <ul style="padding-left:18px;margin-top:8px;color:#334155">
+              <li>Certificate Name — Issuer (2024)</li>
+              <li>Certificate Name — Issuer (2023)</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div style="height:14px"></div>
+
+        <div class="card" id="contact">
+          <div class="section-title">Quick Links</div>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
+            <a class="btn" href="#" onclick="copyToClipboard('your.email@example.com');return false;">✉️ Copy Email</a>
+            <a class="btn ghost" href="#" onclick="copyToClipboard('+919876543210');return false;">📱 Copy Phone</a>
+            <a class="btn ghost" href="#" onclick="openInNewTab('https://github.com/your-username');return false;">🐙 GitHub</a>
+          </div>
+        </div>
+
+      </aside>
+    </main>
+
+    <footer style="padding:18px;border-top:1px solid #eef2f7;text-align:center;color:#64748b;font-size:13px">Made with ❤️ • Replace placeholder text with your details. Tip: Click "Print / Save PDF" to create a downloadable resume.</footer>
+  </div>
+
+  <script>
+    // small interactions
+    function copyToClipboard(text){
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(()=>{alert('Copied to clipboard: ' + text)},()=>{fallbackCopy(text)});
+      } else fallbackCopy(text);
+    }
+    function fallbackCopy(text){
+      var area=document.createElement('textarea');area.value=text;document.body.appendChild(area);area.select();try{document.execCommand('copy');alert('Copied to clipboard: ' + text)}catch(e){prompt('Copy this:',text);}area.remove();
+    }
+    function openInNewTab(url){window.open(url,'_blank');}
+  </script>
+</body>
+</html>
